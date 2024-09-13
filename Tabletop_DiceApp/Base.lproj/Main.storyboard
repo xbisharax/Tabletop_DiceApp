@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-uO-zGd">
-                                <rect key="frame" x="109.33333333333333" y="132" width="174.33333333333337" height="56"/>
+                                <rect key="frame" x="114.33333333333333" y="132" width="164.33333333333337" height="57.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Group 2">
                                         <attributes>
-                                            <font key="NSFont" size="48" name="SourceCodePro-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="48"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -179,7 +179,7 @@
     </scenes>
     <resources>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
