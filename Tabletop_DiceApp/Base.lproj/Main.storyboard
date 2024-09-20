@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="-120"/>
+            <point key="canvasLocation" x="-451" y="-111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yva-VY-AE4">
@@ -98,8 +98,38 @@
                                 <rect key="frame" x="52" y="-47" width="201" height="20.333333333333332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Aa-Jbp">
+                                <rect key="frame" x="23" y="374" width="240" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <string key="text">Dice needed:
+    D2 / Coin flip
+    D4
+    D6
+    D8
+    D10
+    D12
+    D20
+    D100
+
+How do we organize the app?
+    Main screen is the die
+    each button goes to a pop-up
+    class for each die
+        each class has side requirements
+        unique pictures
+        
+History of die rolls on secondary screen
+Amount of die selection
+Pictures of die for selection
+Modifier (+x or -x)
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IaO-36-H4j">
-                                <rect key="frame" x="23" y="128" width="240" height="113.66666666666669"/>
+                                <rect key="frame" x="23" y="93" width="240" height="113.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl4-IE-wfL">
                                         <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="24.666666666666668"/>
@@ -134,7 +164,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-lY-gJF">
-                                <rect key="frame" x="25" y="367" width="172.66666666666666" height="97.666666666666686"/>
+                                <rect key="frame" x="23" y="234.00000000000006" width="172.66666666666666" height="97.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-pm-D5y">
                                         <rect key="frame" x="0.0" y="0.0" width="144.33333333333334" height="24.666666666666668"/>
@@ -174,10 +204,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZk-Db-hUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="-111"/>
+            <point key="canvasLocation" x="200.76335877862596" y="-111.26760563380282"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aZy-qc-20H">
+            <objects>
+                <viewController id="nXm-MS-8qj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Pi-yA-RES">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Uisketch_240912_171738" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-JR-hND">
+                                <rect key="frame" x="21" y="82" width="351" height="705"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bpy-oR-iaM"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjK-Ox-5sa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.83206106870227" y="-111.26760563380282"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Uisketch_240912_171738" width="1812" height="2562"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
