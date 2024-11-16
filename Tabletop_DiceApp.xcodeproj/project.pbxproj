@@ -16,6 +16,7 @@
 		B22E71602C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B22E715E2C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld */; };
 		B22E71622C937F9B00E7F1D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22E71612C937F9B00E7F1D4 /* Assets.xcassets */; };
 		B22E71652C937F9B00E7F1D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B22E71642C937F9B00E7F1D4 /* Base */; };
+		B2A6CBE32CE92E2800F53D7A /* PurposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6CBE22CE92E2800F53D7A /* PurposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B22E71612C937F9B00E7F1D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22E71642C937F9B00E7F1D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22E71662C937F9B00E7F1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A6CBE22CE92E2800F53D7A /* PurposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B22E71572C937F9A00E7F1D4 /* SceneDelegate.swift */,
 				B22E71592C937F9A00E7F1D4 /* ViewController.swift */,
 				17C7B1A72C9E9AF70082A5A5 /* TimelineViewController.swift */,
+				B2A6CBE22CE92E2800F53D7A /* PurposeViewController.swift */,
 				B22E715B2C937F9A00E7F1D4 /* Main.storyboard */,
 				B22E71612C937F9B00E7F1D4 /* Assets.xcassets */,
 				B22E71632C937F9B00E7F1D4 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 				B22E715A2C937F9A00E7F1D4 /* ViewController.swift in Sources */,
 				B22E71602C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld in Sources */,
 				1773FC782CE6AABA00A34D44 /* DiceRNG.swift in Sources */,
+				B2A6CBE32CE92E2800F53D7A /* PurposeViewController.swift in Sources */,
 				B22E71562C937F9A00E7F1D4 /* AppDelegate.swift in Sources */,
 				B22E71582C937F9A00E7F1D4 /* SceneDelegate.swift in Sources */,
 				17C7B1A82C9E9AF70082A5A5 /* TimelineViewController.swift in Sources */,
