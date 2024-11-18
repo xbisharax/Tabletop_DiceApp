@@ -11,7 +11,6 @@
 		17C7B1A82C9E9AF70082A5A5 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7B1A72C9E9AF70082A5A5 /* TimelineViewController.swift */; };
 		B22E71562C937F9A00E7F1D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E71552C937F9A00E7F1D4 /* AppDelegate.swift */; };
 		B22E71582C937F9A00E7F1D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E71572C937F9A00E7F1D4 /* SceneDelegate.swift */; };
-		B22E715A2C937F9A00E7F1D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E71592C937F9A00E7F1D4 /* ViewController.swift */; };
 		B22E715D2C937F9A00E7F1D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B22E715C2C937F9A00E7F1D4 /* Base */; };
 		B22E71602C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B22E715E2C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld */; };
 		B22E71622C937F9B00E7F1D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22E71612C937F9B00E7F1D4 /* Assets.xcassets */; };
@@ -25,7 +24,6 @@
 		B22E71522C937F9A00E7F1D4 /* Tabletop_DiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabletop_DiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22E71552C937F9A00E7F1D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22E71572C937F9A00E7F1D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B22E71592C937F9A00E7F1D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B22E715C2C937F9A00E7F1D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B22E715F2C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tabletop_DiceApp.xcdatamodel; sourceTree = "<group>"; };
 		B22E71612C937F9B00E7F1D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				1773FC772CE6AAB200A34D44 /* DiceRNG.swift */,
 				B22E71552C937F9A00E7F1D4 /* AppDelegate.swift */,
 				B22E71572C937F9A00E7F1D4 /* SceneDelegate.swift */,
-				B22E71592C937F9A00E7F1D4 /* ViewController.swift */,
 				17C7B1A72C9E9AF70082A5A5 /* TimelineViewController.swift */,
 				B2A6CBE22CE92E2800F53D7A /* PurposeViewController.swift */,
 				B22E715B2C937F9A00E7F1D4 /* Main.storyboard */,
@@ -150,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22E715A2C937F9A00E7F1D4 /* ViewController.swift in Sources */,
 				B22E71602C937F9A00E7F1D4 /* Tabletop_DiceApp.xcdatamodeld in Sources */,
 				1773FC782CE6AABA00A34D44 /* DiceRNG.swift in Sources */,
 				B2A6CBE32CE92E2800F53D7A /* PurposeViewController.swift in Sources */,
