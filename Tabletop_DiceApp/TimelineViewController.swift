@@ -9,35 +9,27 @@ import UIKit
 
 class TimelineViewController: UITableViewController {
 
-    let timeline: [String] = ["1: Rough Sketch", "2: Create 1 dice", "3: Create every other die", "4: "]
-    let timeDates: [String] = ["9/12/24", "9/21/24", "TBD", "NA"]
+    let timeline: [String] = ["11/20/24: General UI elements rough draft", "11/21/24: Complete UI and code for choosing dice type", "11/22/24: Complete UI and code for rolling dice", "11/24/24: Clean up UI elements", "11/25/24: Test Application and make appropriate modifications", "11/26/24: Create powerpoint to show important information on the app and its functions"]
     
-    let respon: [String] = ["Code", "Aesthetics", "UI experience"]
-    let responAssign: [String] = ["Ian", "Danni", "Bishara"]
+    let respon: [String] = ["Ian: Code, assistence with UI", "Danni: App icon, lockscreen, powerpoint and project review", "Bishara: UI design, experience, and code"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TVCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         switch section{
-        case 0:
+        case 0: //Timeline rows
             return timeline.count
-        case 1:
+        case 1: //Responsibilities rows
             return respon.count
         default:
             return 0
@@ -46,37 +38,37 @@ class TimelineViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath)
-
-        let text = indexPath.section == 0 ? timeline[indexPath.row] :
-                                            respon[indexPath.row]
-        cell.textLabel?.text = text
+            
+        // Sets the text and detail text based on section
+        switch indexPath.section {
+        case 0: // Timeline section
+            cell.textLabel?.text = timeline[indexPath.row]
+        case 1: // Responsibilities section
+            cell.textLabel?.text = respon[indexPath.row]
+        default:
+            break
+        }
         
-        let assignee = indexPath.section == 0 ? timeDates[indexPath.row] :
-                                                responAssign[indexPath.row]
-        cell.detailTextLabel?.text = assignee
+        // Extras
+        cell.textLabel?.numberOfLines = 0
+        cell.backgroundColor = .systemOrange
         
         return cell
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
+        case 0: //Timeline title
             return "Timeline"
-        default:
+        default: //Responsibilities title
             return "Responsibilities"
         }
     }
     
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowPrototype", sender: indexPath)
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-uO-zGd">
+                                <rect key="frame" x="141" y="60" width="111.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-Tt-g29">
                                 <rect key="frame" x="58" y="316" width="283.33333333333331" height="50"/>
                                 <constraints>
@@ -90,16 +96,18 @@
                                     <segue destination="9Rn-Ne-9cK" kind="showDetail" id="U8t-k1-MOw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoi-uO-zGd">
-                                <rect key="frame" x="141" y="60" width="111.33333333333331" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Top Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTz-kQ-8ri">
+                                <rect key="frame" x="91" y="104" width="211" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
+                            <constraint firstItem="uTz-kQ-8ri" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="1Bo-9m-gki"/>
+                            <constraint firstItem="uTz-kQ-8ri" firstAttribute="centerX" secondItem="Uoi-uO-zGd" secondAttribute="centerX" id="6Ku-Al-CyY"/>
                             <constraint firstItem="D24-Tt-g29" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="316" id="9br-bD-RHR"/>
                             <constraint firstItem="Uoi-uO-zGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ELL-EG-NDp"/>
                             <constraint firstItem="a8F-Mh-wox" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="YuW-uJ-vg1"/>
@@ -107,6 +115,7 @@
                             <constraint firstItem="a8F-Mh-wox" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kk1-Tc-YiG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D24-Tt-g29" secondAttribute="trailing" constant="51.666666666666686" id="mpR-1C-dqc"/>
                             <constraint firstItem="D24-Tt-g29" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p62-Hm-NMS"/>
+                            <constraint firstItem="uTz-kQ-8ri" firstAttribute="top" secondItem="Uoi-uO-zGd" secondAttribute="bottom" constant="8" id="rEu-v0-enG"/>
                             <constraint firstItem="a8F-Mh-wox" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yec-4q-kfG"/>
                         </constraints>
                     </view>
@@ -118,22 +127,24 @@
         <!--Timeline View Controller-->
         <scene sceneID="mcN-v5-Bb8">
             <objects>
-                <tableViewController id="9Rn-Ne-9cK" customClass="TimelineViewController" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Timeline" id="9Rn-Ne-9cK" customClass="TimelineViewController" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="psJ-pJ-BvJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="separatorColor" systemColor="systemOrangeColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Fx9-lW-TvC">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCell" rowHeight="64" id="Fx9-lW-TvC">
+                                <rect key="frame" x="0.0" y="50" width="393" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fx9-lW-TvC" id="6co-ru-4DF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
-                                    <segue destination="Srl-yP-eco" kind="showDetail" id="pdk-37-IHL"/>
+                                    <segue destination="Srl-yP-eco" kind="showDetail" identifier="ShowPrototype" id="pdk-37-IHL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -146,143 +157,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="325-Np-Kc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="31"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yva-VY-AE4">
-            <objects>
-                <viewController id="SRS-6e-vvB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pqc-UK-0wj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kxS-b7-145">
-                                <rect key="frame" x="52" y="-47" width="201" height="20.333333333333332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Aa-Jbp">
-                                <rect key="frame" x="23" y="374" width="240" height="396"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <string key="text">Dice needed:
-    D2 / Coin flip
-    D4
-    D6
-    D8
-    D10
-    D12
-    D20
-    D100
-
-How do we organize the app?
-    Main screen is the die
-    each button goes to a pop-up
-    class for each die
-        each class has side requirements
-        unique pictures
-        
-History of die rolls on secondary screen
-Amount of die selection
-Pictures of die for selection
-Modifier (+x or -x)
-</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IaO-36-H4j">
-                                <rect key="frame" x="50" y="91" width="240" height="113.66666666666669"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl4-IE-wfL">
-                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="24.666666666666668"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Timeline:">
-                                                <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Bold"/>
-                                                    <font key="NSOriginalFont" size="18" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Rough sketch tonight - 9/12/24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-ER-cYr">
-                                        <rect key="frame" x="0.0" y="29.666666666666671" width="240" height="24.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Create one die - 9/21/24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4X-5g-oXU">
-                                        <rect key="frame" x="0.0" y="59.333333333333336" width="193.66666666666666" height="24.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Integrate other die - tbd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYF-Uq-3JO">
-                                        <rect key="frame" x="0.0" y="89" width="201" height="24.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="dAq-nf-zcp"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8fz-lY-gJF">
-                                <rect key="frame" x="49.999999999999986" y="233.99999999999997" width="172.66666666666663" height="97.666666666666657"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-pm-D5y">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.33333333333334" height="24.666666666666668"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Responsibilities:">
-                                                <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Bold"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code - Ian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-MN-EKo">
-                                        <rect key="frame" x="0.0" y="29.666666666666686" width="76" height="19.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aesthetics - Danni" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozW-vd-C86">
-                                        <rect key="frame" x="0.0" y="54" width="133.33333333333334" height="19.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Interface - Bishara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vK-W3-Zls">
-                                        <rect key="frame" x="0.0" y="78.333333333333314" width="172.66666666666666" height="19.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="faG-lR-W6j"/>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bv5-V9-Yqe"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                        <constraints>
-                            <constraint firstItem="bv5-V9-Yqe" firstAttribute="bottom" secondItem="mh0-Aa-Jbp" secondAttribute="bottom" constant="48" id="E00-lv-y56"/>
-                            <constraint firstItem="IaO-36-H4j" firstAttribute="leading" secondItem="bv5-V9-Yqe" secondAttribute="leading" constant="50" id="Gcg-tp-psR"/>
-                            <constraint firstItem="mh0-Aa-Jbp" firstAttribute="leading" secondItem="bv5-V9-Yqe" secondAttribute="leading" constant="23" id="LFc-Mp-lwV"/>
-                            <constraint firstItem="mh0-Aa-Jbp" firstAttribute="top" secondItem="8fz-lY-gJF" secondAttribute="bottom" constant="42.333333333333258" id="S3O-6f-ePG"/>
-                            <constraint firstItem="8fz-lY-gJF" firstAttribute="top" secondItem="IaO-36-H4j" secondAttribute="bottom" constant="29.333333333333343" id="afg-UR-PRT"/>
-                            <constraint firstItem="8fz-lY-gJF" firstAttribute="leading" secondItem="IaO-36-H4j" secondAttribute="leading" id="g6u-9S-j1L"/>
-                            <constraint firstItem="bv5-V9-Yqe" firstAttribute="trailing" secondItem="mh0-Aa-Jbp" secondAttribute="trailing" constant="130" id="rHf-Pi-Gup"/>
-                            <constraint firstItem="IaO-36-H4j" firstAttribute="top" secondItem="bv5-V9-Yqe" secondAttribute="top" constant="32" id="zdw-6D-AIm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GZk-Db-hUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1811" y="395"/>
+            <point key="canvasLocation" x="-318.32061068702291" y="30.985915492957748"/>
         </scene>
         <!--Sketch-->
         <scene sceneID="aZy-qc-20H">
             <objects>
-                <viewController id="nXm-MS-8qj" customClass="Sketch" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sketch" id="nXm-MS-8qj" customClass="Sketch" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Pi-yA-RES">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,6 +198,7 @@ Modifier (+x or -x)
                             <constraint firstItem="bpy-oR-iaM" firstAttribute="bottom" secondItem="9mU-93-dif" secondAttribute="bottom" constant="724" id="jWX-ke-HWM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="m9d-KX-AX1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjK-Ox-5sa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,7 +207,7 @@ Modifier (+x or -x)
         <!--Further Strategy-->
         <scene sceneID="R8h-YF-jJq">
             <objects>
-                <viewController id="JEI-xO-Jut" customClass="FurtherStrategy" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FurtherStrategy" id="JEI-xO-Jut" customClass="FurtherStrategy" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGM-JC-zOR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,9 +218,10 @@ Modifier (+x or -x)
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Stuff:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-BU-JMa">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-BU-JMa">
                                 <rect key="frame" x="14" y="232" width="364" height="378"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <mutableString key="text">Our plan it to create the UI first. When the we have a rough draft of what we're working with, we will continue onto the function of selecting dice and displaying individual and total dice rolls as well as any other feature we might need to make those happen. We will then focus on making modifications to the UI to keep it visually appealing and making sure it's functional and easy to understand. When we are done, we will create a powerpoint to explain the functions and intended use of the application and how we made it happen.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -369,6 +251,7 @@ Modifier (+x or -x)
                             <constraint firstItem="ieF-Zz-4Ji" firstAttribute="top" secondItem="oZm-cx-eiW" secondAttribute="top" id="vMX-xV-QcK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eTv-ES-tpS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmt-mh-lex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,22 +260,24 @@ Modifier (+x or -x)
         <!--Purpose View Controller-->
         <scene sceneID="gI9-6H-7qv">
             <objects>
-                <tableViewController id="MMN-Hk-6ci" customClass="PurposeViewController" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PurposeViewController" id="MMN-Hk-6ci" customClass="PurposeViewController" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FLZ-Je-ivx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="separatorColor" systemColor="systemOrangeColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zK1-1J-6jA">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCell" rowHeight="128" id="zK1-1J-6jA">
+                                <rect key="frame" x="0.0" y="50" width="393" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zK1-1J-6jA" id="80v-qs-kYY">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
-                                    <segue destination="TRk-nC-HaA" kind="showDetail" id="sGt-1v-0bQ"/>
+                                    <segue destination="TRk-nC-HaA" kind="showDetail" identifier="ShowFuture" id="sGt-1v-0bQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -401,15 +286,16 @@ Modifier (+x or -x)
                             <outlet property="delegate" destination="MMN-Hk-6ci" id="aWe-Tf-VVu"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="off-cg-v9k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8Q-fI-TT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515" y="767"/>
+            <point key="canvasLocation" x="512.2137404580152" y="766.90140845070425"/>
         </scene>
         <!--Prototype-->
         <scene sceneID="yDe-I7-Pa6">
             <objects>
-                <viewController id="Srl-yP-eco" customClass="Prototype" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Prototype" id="Srl-yP-eco" customClass="Prototype" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuS-du-Xrr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,6 +336,7 @@ Modifier (+x or -x)
                             <constraint firstItem="M1j-eF-lRf" firstAttribute="centerX" secondItem="yuS-du-Xrr" secondAttribute="centerX" id="zEv-iT-OJa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UKn-ml-Anh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMI-BB-Pyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,14 +345,25 @@ Modifier (+x or -x)
         <!--Future-->
         <scene sceneID="1Hc-XV-hoV">
             <objects>
-                <viewController id="TRk-nC-HaA" customClass="Future" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Future" id="TRk-nC-HaA" customClass="Future" customModule="Tabletop_DiceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lHd-Eg-OZl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Stuff:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YTT-2e-0fZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YTT-2e-0fZ">
                                 <rect key="frame" x="14" y="232" width="364" height="378"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <string key="text">How do we organize the app?
+    Main screen is the die
+    each button goes to a pop-up
+    class for each die
+        each class has side requirements
+        unique pictures
+        
+History of die rolls on secondary screen
+Amount of die selection
+Pictures of die for selection
+Modifier (+x or -x)</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -489,6 +387,7 @@ Modifier (+x or -x)
                             <constraint firstItem="YTT-2e-0fZ" firstAttribute="leading" secondItem="5RX-FF-WxD" secondAttribute="leading" constant="14" id="wLL-0z-Li6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PQi-CB-jPo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5M-9G-hat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

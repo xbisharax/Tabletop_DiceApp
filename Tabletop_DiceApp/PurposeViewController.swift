@@ -8,38 +8,66 @@
 import UIKit
 
 class PurposeViewController: UITableViewController {
+    
+    let purpose:[String] = ["This App allows users to choose a dice of their choice, the amount of dice to roll, and displays each dice roll and total amount rolled."]
+    let target:[String] = ["Specifically tailored for D&D players who require many different type of dice. The use of it can extend to anyone who finds it useful."]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TVCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section{
+        case 0: //Purpose rows
+            return purpose.count
+        case 1: //Target rows
+            return target.count
+        default:
+            return 0
+        }
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath)
 
-        // Configure the cell...
+        // Cell Configuration
+        switch indexPath.section {
+        case 0: // Purpose section
+            cell.textLabel?.text = purpose[indexPath.row]
+        case 1: // Target section
+            cell.textLabel?.text = target[indexPath.row]
+        default:
+            break
+        }
+        
+        // Extras
+        cell.textLabel?.numberOfLines = 0
+        cell.backgroundColor = .systemOrange
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: //Purpose title
+            return "App's Purpose"
+        default: //Target title
+            return "Target Audience"
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowFuture", sender: indexPath)
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
